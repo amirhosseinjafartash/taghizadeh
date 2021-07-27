@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Winter soldier first webapp
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='/stylesheets/style.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+      .container
+        .navbar-header
+          button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand() PC Repairs
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li(class=(title == 'Members' ? 'active' : ''))
+              a.nav-link(href='/') Members 
+            li(class=(title == 'SignIn' ? 'active' : ''))
+              a.nav-link(href='/users/signin') SignIn 
+            li(class=(title == 'SignUp' ? 'active' : ''))
+              a.nav-link(href='/users/signup') SignUp
+        // /.nav-collapse
+    .container
+    != messages()
+     block content
